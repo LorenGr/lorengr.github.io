@@ -3,7 +3,7 @@ name: angular FlatStrap
 # current version of the software
 
 github:
-  url: loki.com
+  url: http://lorengr.github.io/
 
 version: 0.1.0
 # url of the download button
