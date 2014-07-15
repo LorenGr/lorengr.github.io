@@ -1,6 +1,6 @@
 var app = angular.module("flatstrap-demo",[]);
 
-app.controller("flatgrid-basic",function(){
+app.controller("flatgrid-basic",function($scope){
 	$scope.gridOptions = {
 		"rows" : [
 			{
