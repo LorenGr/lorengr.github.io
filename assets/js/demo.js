@@ -4,25 +4,25 @@ app.controller("flatgrid-basic",function(){
 	$scope.gridOptions = {
 		"rows" : [
 			{
-	            "Id" : "1",
+	            "Id" : "1"
 	            ,"Name" : "Steve"
 	            ,"Surname" : "Jobs"
 	            ,"Company" : "Apple"
 	        },	        
 	        {
-	            "Id" : "2",
+	            "Id" : "2"
 	            ,"Name" : "Bill"
 	            ,"Surname" : "Gates"
 	            ,"Company" : "Microsoft"
 	        },
 	        {
-	            "Id" : "3",
+	            "Id" : "3"
 	            ,"Name" : "Larry"
 	            ,"Surname" : "Page"
 	            ,"Company" : "Google"
 	        },
 	        {
-	            "Id" : "4",
+	            "Id" : "4"
 	            ,"Name" : "Mark"
 	            ,"Surname" : "Zuckerberg"
 	            ,"Company" : "Facebook"
