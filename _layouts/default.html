@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="flatstrap-demo">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +15,19 @@
   <link href="{{site.github.url}}/assets/css/docs.min.css" rel="stylesheet">
   <link href="{{site.github.url}}/assets/css/style.css" rel="stylesheet">
 
-  <style>
-    #content {
-      background:{{site.header.color1}};
-      background:linear-gradient(135deg, {{site.header.color1}}, {{site.header.color2}});
-    }
-  </style>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="{{site.github.url}}/assets/js/docs.min.js"></script>
+
+  <!-- AngularJS -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.15/angular.min.js"></script>
+
+  <!-- AngularFlatStrap -->
+  <script type="text/javascript" src="https://rawgit.com/LorenGr/angular-flatstrap/master/build/angular-flatstrap.js"></script>
+
+  <!-- FlatStrap Demo Controllers -->
+  <script type="text/javascript" src="{{site.github.url}}/assets/js/demo.js"></script>
+
 </head>
 
 <body>
