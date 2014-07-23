@@ -1,6 +1,6 @@
 angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"]);
 
-angular.module("flatstrapDemo").controller("flatgridBasic",function($scope){
+angular.module("flatstrapDemo").controller("flatgridBasic",function($scope,$q){
 
 	$scope.flatgridOptsBasic = {
 		"rows" : [
@@ -57,23 +57,23 @@ angular.module("flatstrapDemo").controller("flatgridBasic",function($scope){
 			,onadd : "addItem"
 			,ondelete : "deleteItem"
 		}
-
-        $scope.addItem = function(pkg) {
-            var p = $q.defer();
-            p.resolve(pkg.data);
-            return p.promise;
-        }
-        $scope.saveItem = function(pkg) {
-            var p = $q.defer();
-            p.resolve(pkg.data);
-            return p.promise;
-        }
-        $scope.deleteItem = function(pkg) {
-            var p = $q.defer();
-            p.resolve({});
-            return p.promise;
-        }
 	}
+
+    $scope.addItem = function(pkg) {
+        var p = $q.defer();
+        p.resolve(pkg.data);
+        return p.promise;
+    }
+    $scope.saveItem = function(pkg) {
+        var p = $q.defer();
+        p.resolve(pkg.data);
+        return p.promise;
+    }
+    $scope.deleteItem = function(pkg) {
+        var p = $q.defer();
+        p.resolve({});
+        return p.promise;
+    }
 
 
 });
