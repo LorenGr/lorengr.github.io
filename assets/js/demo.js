@@ -1,7 +1,8 @@
-var app = angular.module("flatstrap-demo",[]);
+angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"]);
 
-app.controller("flatgrid-basic",function($scope){
-	$scope.gridOptions = {
+angular.module("flatstrapDemo").controller("flatgridBasic",function($scope){
+
+	$scope.flatgridOptsBasic = {
 		"rows" : [
 			{
 	            "Id" : "1"
@@ -57,4 +58,6 @@ app.controller("flatgrid-basic",function($scope){
 			,ondelete : "deleteItem"
 		}
 	}
+
+
 });
