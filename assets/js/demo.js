@@ -57,6 +57,22 @@ angular.module("flatstrapDemo").controller("flatgridBasic",function($scope){
 			,onadd : "addItem"
 			,ondelete : "deleteItem"
 		}
+
+        $scope.addItem = function(pkg) {
+            var p = $q.defer();
+            p.resolve(pkg.data);
+            return p.promise;
+        }
+        $scope.saveItem = function(pkg) {
+            var p = $q.defer();
+            p.resolve(pkg.data);
+            return p.promise;
+        }
+        $scope.deleteItem = function(pkg) {
+            var p = $q.defer();
+            p.resolve({});
+            return p.promise;
+        }
 	}
 
 
