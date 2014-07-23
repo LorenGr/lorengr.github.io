@@ -2,3 +2,6 @@
 .flatgridDemoBasic .scrollItems {
 	height: 300px !important;
 }
+.demoBlock {
+	margin-top : 30px;
+}
