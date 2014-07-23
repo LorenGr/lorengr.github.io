@@ -71,7 +71,7 @@ angular.module("flatstrapDemo").controller("flatgridBasic",function($scope,$q){
     }
     $scope.deleteItem = function(pkg) {
         var p = $q.defer();
-        p.resolve({});
+        p.resolve(null);
         return p.promise;
     }
 
