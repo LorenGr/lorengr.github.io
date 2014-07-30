@@ -1,6 +1,5 @@
-angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"]);
-
-angular.module("flatstrapDemo").controller("flatgridBasic",function($scope,$q){
+angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
+       .controller("flatgridBasic",function($scope,$q){
 
 	$scope.flatgridOptsBasic = {
 		"rows" : [
