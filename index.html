@@ -40,12 +40,141 @@ angular.module("myModule",["flatstrap"])
   <h3 id="install-bower">Bower Install</h3>
   {% highlight text %}$ bower install angular-flatstrap{% endhighlight %}  
 
-  <h3 id="configuration">FlatGrid
-
+  <h1 id="configuration">FlatGrid
 	  <small>
 		  (<a target="_blank" href="https://github.com/LorenGr/angular-flatstrap/tree/master/src/angular-flatgrid">flatstrap.flatgrid</a>)
 	  </small>
-  </h3>
+  </h1>
+
+	<div class="configBlock">
+
+		<h3>Configuration Object</h3>
+
+		<ul>
+			<code class="na">rows</code>
+			: An Object Array containing all the rows of the grid.</li>
+		</ul>
+
+		<ul>
+			<lh><code class="na">columns</code></lh>
+			: An Object Array which will determine the FlatGrid column setup (object per column).
+
+			<ul>
+				<li>
+					<code>Name</code>
+					: The Name of the object that this column should retrieve its contents from.
+				</li>
+				<li>
+					<code>Label</code>
+					: The title text to show on the column header
+				</li>
+				<li>
+					<code>Sortable</code>
+					<em>(Default: true)</em>
+					: Boolean that enables/disables column sorting through the column header
+				</li>
+				<li>
+					<code>AutoFocus</code>
+					<em>(Default: false)</em>
+					: Boolean that sets focus (onload), to the postForm* field of this column
+				</li>
+
+				<li>
+					<code>Form</code>
+					<em>(Default: "input")</em>
+					: The object type inside each cell of the column.
+					<ul>
+						<li><code>input</code>Text Field</li>
+						<li><code>checkbox</code>Radio button (toggler)</li>
+						<li><code>datetime</code>Date and Time popup selector</li>
+						<li><code>button</code>A clickable button with an optional callback</li>
+					</ul>
+				</li>
+			</ul>
+
+		</ul>
+		<ul>
+			<lh><code class="na">options</code></lh>
+			: Parameters which will be applied to all the grid.
+			<ul>
+				<li>
+					<code>title</code>
+					<em>(Default: null)</em>
+					:  A title header for the entire grid.
+				</li>
+				<li>
+					<code>defaultSort</code>
+					<em>(Default: First Column)</em>
+					:  The name of the object representing the column to sort.
+				</li>
+				<li>
+					<code>defaultSortOrder</code>
+					<em>(Default: 'asc')</em>
+					:  Can be 'asc' or 'desc'
+				</li>
+				<li>
+					<code>controls</code>
+					<em>(Default: true)</em>
+					: Controls appear on the last column of each row.They serve to edit/delete.
+				</li>
+				<li>
+					<code>postForm</code>
+					<em>(Default: true)</em>
+					: Show or hide the postForm
+				</li>
+				<li>
+					<code>pagination</code>
+					<em>(Default: true)</em>
+					: When false, grid becomes scrollable.
+				</li>
+				<li>
+					<code>search</code>
+					<em>(Default: true)</em>
+					: Shows or hide row searching text field.
+				</li>
+
+			</ul>
+		</ul>
+		<ul>
+			<ul>
+				<lh><code class="na">Events</code></lh>
+				: function callbacks
+
+					<h6 class="c">
+						- Callbacks need to be accessible through scope
+						<br>- Row data is available as callback first argument. ([Argument Name].data</code> contains raw data).
+						<br>- Callbacks must return resolved promises
+					</h6>
+
+
+
+				<ul>
+					<li>
+						<code>onrowfocus</code>
+						: If a callback is provided grid rows become clickable.
+					</li>
+					<li>
+						<code>onformbuttonclick</code>
+						: triggered when the 'button' inside a row cell is clicked
+					</li>
+					<li>
+						<code>ondelete</code>
+						: triggered when a row is deleted through the row 'controls'
+					</li>
+					<li>
+						<code>onadd</code>
+						: triggered when a new item is added through the postForm*
+					</li>
+					<li>
+						<code>onsave</code>
+						: triggered when a row is modified and confirmed
+					</li>
+				</ul>
+			</ul>
+		</ul>
+		<em>* postForm is the first row of the grid that serves to add a new row</em>
+
+	</div>
 
 	<div ng-controller="flatgridBasic" class="highlight  flatgridDemoBasic demoBlock">
 		<div flat-grid="flatgridOptsBasic"></div>
@@ -125,21 +254,20 @@ angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
 				Name       : "Surname",
 				Label      : "Surname / Last Name",
 				Sortable   : true,
-				AutoFocus  : true,
 				Form       : "input"
 			},
 			{
 				Name       : "Company",
 				Label      : "Company",
 				Sortable   : true,
-				AutoFocus  : true,
 				Form       : "input"
 			}
 		],
 		options : {
 			onsave   : "saveItem",
 			onadd    : "addItem",
-			ondelete : "deleteItem"
+			ondelete : "deleteItem",
+			title    : "Basic Demo"
 		}
 	}
 	//onsave callback

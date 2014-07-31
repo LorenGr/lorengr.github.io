@@ -21,3 +21,7 @@
 h2 > small > a , h1 > small > a , h3 > small > a {
 	color: #999;
 }
+
+.configBlock {
+	line-height: 27px;
+}

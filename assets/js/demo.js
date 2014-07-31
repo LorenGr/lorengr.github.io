@@ -40,14 +40,12 @@ angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
 				Name : 		"Surname",
 				Label : 	"Surname / Last Name",
 				Sortable  : true,
-				AutoFocus : true,
 				Form : 		"input"
 			},
 			{
 				Name : 		"Company",
 				Label : 	"Company",
 				Sortable  : true,
-				AutoFocus : true,
 				Form : 		"input"
 			}
 		],
@@ -55,6 +53,7 @@ angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
 			 onsave : "saveItem"
 			,onadd : "addItem"
 			,ondelete : "deleteItem"
+			,title  : "Basic Demo"
 		}
 	}
 
