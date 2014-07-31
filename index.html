@@ -42,7 +42,7 @@ angular.module("myModule",["flatstrap"])
 
   <h3 id="configuration">FlatGrid</h3>
 
-	<div ng-controller="flatgridBasic" class="flatgridDemoBasic demoBlock">
+	<div ng-controller="flatgridBasic" class="highlight  flatgridDemoBasic demoBlock">
 		<div flat-grid="flatgridOptsBasic"></div>
 	</div>
 
@@ -65,18 +65,18 @@ angular.module("myModule",["flatstrap"])
 
 					<div class="ng-scope">
 
-<pre ng-non-bindable="">
+
 {% highlight html %}
 <div ng-controller="flatgridBasic" class="flatgridDemoBasic demoBlock">
 	<div flat-grid="flatgridOptsBasic"></div>
 </div>
 {% endhighlight %}
-</pre>
+
 					</div>
 				</div><div class="tab-pane ng-scope" ng-class="{active: active1=='javascript' }">
 
 					<div plunker-content="javascript" class="ng-scope">
-											<pre ng-non-bindable="">
+
 {% highlight javascript %}
 angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
        .controller("flatgridBasic",function($scope,$q){
