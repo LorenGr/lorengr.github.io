@@ -1,6 +1,6 @@
 .bs-docs-masthead {
   margin-bottom:20px;
-  background: url("../images/flatgrid.png") bottom right 55% 0 no-repeat,url("../images/bg.png") repeat;
+  background: url("../images/flatgrid.png") no-repeat bottom right / 55% auto , url("../images/bg.png") repeat;
 }
 
 .bs-docs-header h1, .bs-docs-header p {
