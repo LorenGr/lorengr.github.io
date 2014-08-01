@@ -35,7 +35,6 @@ angular.module("flatstrapDemo",[
 				Name : 		"Name",
 				Label : 	"First Name",
 				Sortable  : true,
-				AutoFocus : true,
 				Form : 		"input"
 			},
 			{
@@ -92,7 +91,6 @@ angular.module("flatstrapDemo",[
 				Name       : "Event",
 				Label      : "Event Name",
 				Sortable   : true,
-				AutoFocus  : true,
 				Editable   : false,
 				Form       : "input"
 			},
