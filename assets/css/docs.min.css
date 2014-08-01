@@ -167,6 +167,9 @@ body {
 	overflow: hidden;
 }
 
+.bs-docs-masthead {
+	box-sizing: border-box;
+}
 .bs-docs-masthead,.bs-docs-header {
 	position: relative;
 	padding: 30px 15px;
