@@ -13,7 +13,7 @@ isHome: true
 	AngularFlatStrap is an evolving collection of components that can be used within your AngularJS application.
   </blockquote>
 
-  <h3 id="features">Dependencies</h3>
+  <h3 id="dependencies">Dependencies</h3>
 
   <ul>
 	<li><a href="http://angularjs.org">AngularJS</a> <em>Tested on version 1.3</em></li>
@@ -22,7 +22,7 @@ isHome: true
 	<li><a href="http://xdsoft.net/jqplugins/datetimepicker/">jQuery DateTimePicker plugin</a> *only required if datetime type cells are used. <em>Tested on version 2.1.9</em></li>
   </ul>
   
-  <h3 id="examples">Files to download</h3>
+  <h3 id="download">Files to download</h3>
   
   <p>Build files for all directives are distributed in a main single file called 
   <code>build/angular-flatstrap.js</code> (minified for production usage). This file contains all the directives and templates you will need to impliment the components in your app. If you only wish to include individual components, you can find the build files in the folder <code>/src/[component name]/build/[component name].min.js</code></p>
@@ -41,12 +41,28 @@ angular.module("myModule",["flatstrap"])
 
   <h3 id="install-bower">Bower Install</h3>
   {% highlight text %}$ bower install angular-flatstrap{% endhighlight %}  
-
+</section>
+<section class="bs-docs-section">
   <h1 id="configuration">FlatGrid
 	  <small>
 		  (<a target="_blank" href="https://github.com/LorenGr/angular-flatstrap/tree/master/src/angular-flatgrid">flatstrap.flatgrid</a>)
 	  </small>
   </h1>
+
+  <p>
+	  FlatGrid is a data grid component for your AngularJS application.
+	  FlatGrid can be setup through 1 object which contains the row data, the column setup and the grid general options.
+	  Some of the features that make this grid special are :
+	  <ul>
+	    <li>Excel-like editing and cell navigation</li>
+	    <li>Cells can contain not only text, but various types of interactive form elements.</li>
+	    <li>Add, delete and edit grid contents</li>
+	    <li>Slick 'Flat' style look and feel</li>
+	    <li>Pagination Feature</li>
+	    <li>Search box to find the exact row that you need</li>
+	    <li>and more improvements to come...</li>
+	  </ul>
+  </p>
 
 	<div class="configBlock">
 
@@ -183,7 +199,8 @@ angular.module("myModule",["flatstrap"])
 
 
 <!--1. Demo Basic : start	-->
-	<div ng-controller="flatgridController" class="highlight  flatgridDemoBasic demoBlock">
+	<h3 id="demo1">Show me!</h3>
+    <div ng-controller="flatgridController" class="highlight  flatgridDemoBasic demoBlock">
 		<div flat-grid="flatgridOptsBasic"></div>
 	</div>
 
