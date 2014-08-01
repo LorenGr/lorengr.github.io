@@ -324,6 +324,11 @@ body {
 .carbonad #azcarbon>img {
 	display: none;
 }
+@media (max-width:600px) {
+	.bs-docs-masthead .container {
+		left: 8px;
+	}
+}
 
 @media (min-width:480px) {
 	.carbonad {
@@ -332,9 +337,7 @@ body {
 		border-radius: 4px;
 		border-width: 1px!important;
 	}
-	.bs-docs-masthead .container {
-		left: 8px;
-	}
+
 
 	.bs-docs-masthead .carbonad {
 		margin: 50px auto 0!important;
