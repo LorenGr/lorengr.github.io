@@ -15,15 +15,15 @@ body {
 }
 
 .btn-outline {
-	color: #563d7c;
+	color: #4295b7;
 	background-color: transparent;
-	border-color: #563d7c;
+	border-color: #4295b7;
 }
 
 .btn-outline:hover,.btn-outline:focus,.btn-outline:active {
 	color: #fff;
-	background-color: #563d7c;
-	border-color: #563d7c;
+	background-color: #4295b7;
+	border-color: #4295b7;
 }
 
 .btn-outline-inverse {
@@ -33,7 +33,7 @@ body {
 }
 
 .btn-outline-inverse:hover,.btn-outline-inverse:focus,.btn-outline-inverse:active {
-	color: #563d7c;
+	color: #4295b7;
 	text-shadow: none;
 	background-color: #fff;
 	border-color: #fff;
@@ -43,7 +43,7 @@ body {
 	display: block;
 	font-weight: 500;
 	color: #fff;
-	background-color: #563d7c;
+	background-color: #4295b7;
 	border-radius: 15%;
 	cursor: default;
 	text-align: center;
@@ -64,7 +64,7 @@ body {
 }
 
 .bs-docs-booticon-inverse {
-	color: #563d7c;
+	color: #4295b7;
 	background-color: #fff;
 }
 
@@ -204,7 +204,7 @@ body {
 .bs-docs-masthead .version {
 	margin-top: -15px;
 	margin-bottom: 30px;
-	color: #9783b9;
+	color: #4295b7;
 }
 
 .bs-docs-masthead .btn {
@@ -482,18 +482,18 @@ body {
 
 .bs-docs-sidebar .nav>li>a:hover,.bs-docs-sidebar .nav>li>a:focus {
 	padding-left: 19px;
-	color: #563d7c;
+	color: #4295b7;
 	text-decoration: none;
 	background-color: transparent;
-	border-left: 1px solid #563d7c;
+	border-left: 1px solid #4295b7;
 }
 
 .bs-docs-sidebar .nav>.active>a,.bs-docs-sidebar .nav>.active:hover>a,.bs-docs-sidebar .nav>.active:focus>a {
 	padding-left: 18px;
 	font-weight: 700;
-	color: #563d7c;
+	color: #4295b7;
 	background-color: transparent;
-	border-left: 2px solid #563d7c;
+	border-left: 2px solid #4295b7;
 }
 
 .bs-docs-sidebar .nav .nav {
@@ -530,7 +530,7 @@ body {
 
 .back-to-top:hover {
 	text-decoration: none;
-	color: #563d7c;
+	color: #4295b7;
 }
 
 @media (min-width:768px) {
@@ -690,7 +690,7 @@ h1[id] {
 }
 
 .color-swatches .bs-purple {
-	background-color: #563d7c;
+	background-color: #4295b7;
 }
 
 .color-swatches .bs-purple-light {
@@ -1110,7 +1110,7 @@ h1[id] {
 
 .bs-glyphicons li:hover {
 	color: #fff;
-	background-color: #563d7c;
+	background-color: #4295b7;
 }
 
 @media (min-width:768px) {
@@ -1220,7 +1220,7 @@ h1[id] {
 	width: 100%;
 	margin-bottom: 15px;
 	overflow: hidden;
-	color: #563d7c;
+	color: #4295b7;
 	background-color: #f9f9f9;
 	border-radius: 4px;
 }
@@ -1236,7 +1236,7 @@ h1[id] {
 
 .bs-brand-logos .inverse {
 	color: #fff;
-	background-color: #563d7c;
+	background-color: #4295b7;
 }
 
 .bs-brand-item h1,.bs-brand-item h3 {
