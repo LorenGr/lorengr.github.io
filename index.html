@@ -16,8 +16,10 @@ isHome: true
   <h3 id="features">Dependencies</h3>
 
   <ul>
-	<li><a href="http://angularjs.org">AngularJS</a> (requires AngularJS 1.3)</li>
+	<li><a href="http://angularjs.org">AngularJS</a> <em>Tested on version 1.3</em></li>
 	<li><a href="https://rawgit.com/LorenGr/angular-flatstrap/master/build/angular-flatstrap.css">FlatStrap CSS</a> ('Flat' design theme)</li>
+	<li><a href="https://github.com/angular-ui/bootstrap/tree/master/src/buttons">Angular-UI Bootstrap - Buttons (ui.bootstrap.buttons)</a> *only required if checkbox type cells are used. <em>Tested on version 0.10.0</em></li>
+	<li><a href="http://xdsoft.net/jqplugins/datetimepicker/">jQuery DateTimePicker plugin</a> *only required if datetime type cells are used. <em>Tested on version 2.1.9</em></li>
   </ul>
   
   <h3 id="examples">Files to download</h3>
@@ -69,6 +71,11 @@ angular.module("myModule",["flatstrap"])
 					: The title text to show on the column header
 				</li>
 				<li>
+					<code>Editable</code>
+					<em>(Default: true)</em>
+					: Boolean that toggles cell readonly
+				</li>
+				<li>
 					<code>Sortable</code>
 					<em>(Default: true)</em>
 					: Boolean that enables/disables column sorting through the column header
@@ -85,8 +92,8 @@ angular.module("myModule",["flatstrap"])
 					: The object type inside each cell of the column.
 					<ul>
 						<li><code>input</code>Text Field</li>
-						<li><code>checkbox</code>Radio button (toggler)</li>
-						<li><code>datetime</code>Date and Time popup selector</li>
+						<li><code>checkbox</code>Radio button (toggler) *requires ui.bootstrap.buttons</li>
+						<li><code>datetime</code>Date and Time popup selector *use UTC time format in source json</li>
 						<li><code>button</code>A clickable button with an optional callback</li>
 					</ul>
 				</li>
@@ -146,8 +153,6 @@ angular.module("myModule",["flatstrap"])
 						<br>- Callbacks must return resolved promises
 					</h6>
 
-
-
 				<ul>
 					<li>
 						<code>onrowfocus</code>
@@ -176,7 +181,9 @@ angular.module("myModule",["flatstrap"])
 
 	</div>
 
-	<div ng-controller="flatgridBasic" class="highlight  flatgridDemoBasic demoBlock">
+
+<!--1. Demo Basic : start	-->
+	<div ng-controller="flatgridController" class="highlight  flatgridDemoBasic demoBlock">
 		<div flat-grid="flatgridOptsBasic"></div>
 	</div>
 
@@ -195,27 +202,26 @@ angular.module("myModule",["flatstrap"])
 					</li>
 				</ul>
 				<div class="tab-content">
+
 					<div class="tab-pane ng-scope active" ng-class="{active: active1=='markup'}">
 
-					<div class="ng-scope">
-
-
 {% highlight html %}
-<div ng-controller="flatgridBasic" class="flatgridDemoBasic demoBlock">
-	<div flat-grid="flatgridOptsBasic"></div>
+<div ng-controller="flatgridController">
+	<div flat-grid="flatgriConfig"></div>
 </div>
 {% endhighlight %}
 
 					</div>
-				</div><div class="tab-pane ng-scope" ng-class="{active: active1=='javascript' }">
 
-					<div plunker-content="javascript" class="ng-scope">
+					<div class="tab-pane ng-scope" ng-class="{active: active1=='javascript' }">
+
+						<div plunker-content="javascript" class="ng-scope">
 
 {% highlight javascript %}
 angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
-       .controller("flatgridBasic",function($scope,$q){
+       .controller("flatgridController",function($scope,$q){
 
-	$scope.flatgridOptsBasic = {
+	$scope.flatgridConfig = {
 		"rows" : [
 			{
 				"Id"       : "1",
@@ -292,7 +298,120 @@ angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
 {% endhighlight %}
 
 					</div>
-				</div><!-- end ngRepeat: tab in tabs -->
+				</div>
+				<!--1. Demo Basic : end	-->
+
+
+<!--2. Demo Form Types : start	-->
+<div ng-controller="flatgridController" class="highlight  flatGridBlackTheme flatgridDemo flatgridDemoFormTypes demoBlock">
+	<div flat-grid="flatgridOptsFormTypes"></div>
+</div>
+
+<div class="row code">
+	<div class="col-md-12 ng-scope">
+		<div class="pull-right">
+			<button class="btn btn-info" id="plunk-btn" ng-click="edit('1.2.10', '3.1.1', '0.11.0', 'accordion')"><i class="glyphicon glyphicon-edit"></i> Edit in plunker</button>
+		</div>
+		<div class="ng-isolate-scope" ng-init="active2='markup'">
+			<ul class="nav nav-tabs" ng-class="{'nav-stacked': vertical, 'nav-justified': justified}" >
+				<li ng-class="{active: active2=='markup', disabled: disabled}" heading="Markup" class="ng-isolate-scope active">
+					<a ng-click="active2='markup'" class="ng-binding">Markup</a>
+				</li>
+				<li ng-class="{active: active2=='javascript', disabled: disabled}" heading="JavaScript" class="ng-isolate-scope">
+					<a ng-click="active2='javascript'" class="ng-binding">JavaScript</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+
+				<div class="tab-pane ng-scope active" ng-class="{active: active2=='markup'}">
+
+{% highlight html %}
+<div ng-controller="flatgridController">
+	<div flat-grid="flatgridConfig"></div>
+</div>
+{% endhighlight %}
+
+				</div>
+
+				<div class="tab-pane ng-scope" ng-class="{active: active2=='javascript' }">
+
+					<div plunker-content="javascript" class="ng-scope">
+
+{% highlight javascript %}
+angular.module("flatstrapDemo",["flatstrap","ui.bootstrap"])
+       .controller("flatgridController",function($scope,$q){
+
+	$scope.flatgridConfig = {
+		"rows" : [
+			{
+				"Id"      : "1",
+				"Event"   : "Jazz Festival",
+				"SoldOut" : true,
+				"Date"    : "2012-09-02T09:11:43Z"
+			},
+			{
+				"Id"      : "2",
+				"Event"   : "Annual Veterans Reunion",
+				"SoldOut" : false,
+				"Date"    : "2013-01-19T08:00:00Z"
+			},
+			{
+				"Id"      : "3",
+				"Event"   : "Salsa Dancing Show",
+				"SoldOut" : false,
+				"Date"    : "2013-12-24T00:00:00Z"
+			},
+			{
+				"Id"      : "4",
+				"Event"   : "Rock Festival",
+				"SoldOut" : true,
+				"Date"    : "2013-08-10T11:00:00Z"
+			}
+
+		],
+		"columns" : [
+			{
+				Name       : "Event",
+				Label      : "Event Name",
+				Sortable   : true,
+				AutoFocus  : true,
+				Editable   : false,
+				Form       : "input"
+			}
+		],
+		options : {
+			onsave   : "saveItem",
+			onadd    : "addItem",
+			ondelete : "deleteItem",
+			title    : "Form Types Demo",
+			controls : false
+
+		}
+	}
+	//onsave callback
+	$scope.saveItem = function(pkg) {
+		var p = $q.defer();
+		p.resolve(pkg.data);
+		return p.promise;
+	};
+	//onadd callback
+	$scope.addItem = function(pkg) {
+		var p = $q.defer();
+		p.resolve(pkg.data);
+		return p.promise;
+	};
+	//ondelete callback
+	$scope.deleteItem = function(pkg) {
+		var p = $q.defer();
+		p.resolve(null);
+		return p.promise;
+	};
+});
+{% endhighlight %}
+
+					</div>
+				</div>
+				<!--2. Demo Form Types : end	-->
 				</div>
 			</div>
 		</div>
