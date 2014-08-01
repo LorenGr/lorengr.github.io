@@ -75,7 +75,7 @@ body {
 
 .bs-docs-nav {
 	margin-bottom: 0;
-	background-color: #fff;
+	background-color: #141414;
 	border-bottom: 0;
 }
 
@@ -84,17 +84,17 @@ body {
 }
 
 .bs-docs-nav .navbar-brand,.bs-docs-nav .navbar-nav>li>a {
-	color: #563d7c;
+	color: #fff;
 	font-weight: 500;
 }
 
 .bs-docs-nav .navbar-nav>li>a:hover,.bs-docs-nav .navbar-nav>.active>a,.bs-docs-nav .navbar-nav>.active>a:hover {
-	color: #463265;
+	color: #4295b7;
 	background-color: #f9f9f9;
 }
 
 .bs-docs-nav .navbar-toggle .icon-bar {
-	background-color: #563d7c;
+	background-color: #4295b7;
 }
 
 .bs-docs-nav .navbar-header .navbar-toggle {
